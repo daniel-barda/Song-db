@@ -26,6 +26,6 @@ In the project directory, you can run:
 
 
 ## Demo
-[Demo App](song-db.netlify.app)
+[Demo App](https://song-db.netlify.app/)
 
 ![Demo App Photo](https://github.com/ProfessorWeb/Song-db/blob/main/src/images/Demo.png?raw=true)
