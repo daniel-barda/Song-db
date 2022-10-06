@@ -25,7 +25,7 @@ const AppProvider = ({ children }) => {
         limit: "5",
       },
       headers: {
-        "X-RapidAPI-Key": "413491cce6msh6c7c99ac3d7467ep14120ejsnc4a3c79f96a7",
+        "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
         "X-RapidAPI-Host": "shazam.p.rapidapi.com",
       },
     };
