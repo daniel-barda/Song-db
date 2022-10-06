@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --colorFonts: #fff;
+}
+
+body {
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  border-radius: 15px;
+  width: 150px;
+}
+
+article {
+  width: auto;
+  margin-top: 30px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #212121;
+  color: var(--colorFonts);
+}
+
+h1 {
+  margin-left: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+a {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+h3 {
+  color: var(--colorFonts);
+  text-align: center;
+}
+
+.logo {
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 35px;
+  margin: 0 auto;
+}
+
+.TopBar {
+  background-color: black;
+  margin: 0;
+  color: var(--colorFonts);
+}
+
+.search {
+  margin: 12px;
+  background-color: #242424;
+  color: var(--colorFonts);
+  border-radius: 500px;
+  width: 50%;
+  text-transform: capitalize;
+}
+
+.submit-btn {
+  position: relative;
+  right: 52px;
+}
+
+.album {
+  background-color: #151515;
+  margin: 10px;
+  padding: 20px;
+}
+
+/* Loading */
+.progress {
+  margin: auto;
+  margin-top: 100px;
+  width: 134.4px;
+  height: 24.6px;
+  border-radius: 22.4px;
+  color: #77dc2f;
+  border: 2.2px solid;
+  position: relative;
+}
+
+.progress::before {
+  content: "";
+  position: absolute;
+  margin: 2.2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: progress-pf82op 2s infinite;
+}
+
+@keyframes progress-pf82op {
+  100% {
+    inset: 0;
+  }
+}
