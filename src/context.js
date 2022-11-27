@@ -49,17 +49,26 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  const handleSearch = (query) => {
-    setQuery(query);
+  const handleSearch = () => {
+    if (!query) return;
+    getJSON();
   };
 
   useEffect(() => {
-    getJSON();
+    handleSearch();
   }, []);
 
   return (
     <AppContext.Provider
-      value={{ isLoading, musicArray, query, handleSearch, getJSON, error }}
+      value={{
+        isLoading,
+        musicArray,
+        query,
+        setQuery,
+        handleSearch,
+        getJSON,
+        error,
+      }}
     >
       {children}
     </AppContext.Provider>
