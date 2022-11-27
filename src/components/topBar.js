@@ -5,7 +5,7 @@ import logo from "../images/logo.svg";
 import { useGlobalContext } from "../context";
 
 const TopBar = () => {
-  const { query, handleSearch, getJSON } = useGlobalContext();
+  const { query, handleSearch, setQuery } = useGlobalContext();
 
   return (
     <div className="TopBar pb-1">
@@ -13,7 +13,7 @@ const TopBar = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          getJSON();
+          handleSearch();
         }}
       >
         <label className="relative block flex justify-center">
@@ -27,7 +27,7 @@ const TopBar = () => {
             type="text"
             name="search"
             value={query}
-            onChange={(e) => handleSearch(e.target.value)}
+            onChange={(e) => setQuery(e.target.value)}
           />
           <button className="submit-btn">
             <BsSearch />
