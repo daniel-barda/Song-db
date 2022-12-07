@@ -45,12 +45,13 @@ const AppProvider = ({ children }) => {
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
+      setError(true);
       console.error(error);
     }
   };
 
   const handleSearch = () => {
-    if (!query) return;
+    if (!query) return; // guard clauses
     getJSON();
   };
 
