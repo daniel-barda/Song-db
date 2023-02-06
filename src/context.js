@@ -57,7 +57,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     handleSearch();
-  }, [query]);
+  }, []);
 
   return (
     <AppContext.Provider
